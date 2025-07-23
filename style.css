@@ -1,28 +1,18 @@
-/* Reset default styles */
+/* Base styles (no change) */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
-  overflow-x: hidden;
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
-  padding: 0;
+  padding: 20px;
 }
 
-/* Container wrapper to center and limit width */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Header */
 header {
   text-align: center;
   padding: 20px 0;
@@ -41,7 +31,6 @@ header h1 {
   filter: brightness(1.2) contrast(1.2);
 }
 
-/* Navigation */
 nav {
   margin-top: 10px;
 }
@@ -49,7 +38,6 @@ nav {
 nav ul {
   list-style: none;
   text-align: center;
-  padding: 0;
 }
 
 nav ul li {
@@ -65,18 +53,17 @@ nav a {
 }
 
 nav a:hover {
-  color: #fff;
+  color: #3498db;
   text-decoration: underline;
 }
 
-/* Main Content */
 main {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 40px auto;
   padding: 0 20px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 section {
@@ -86,10 +73,8 @@ section {
 h2 {
   margin-bottom: 10px;
   color: #2c3e50;
-  font-size: 1.8rem;
 }
 
-/* Project Card */
 .project {
   margin-bottom: 20px;
   padding: 15px;
@@ -124,7 +109,6 @@ h2 {
   border-radius: 5px;
 }
 
-/* Contact Section */
 form {
   display: flex;
   flex-direction: column;
@@ -141,7 +125,6 @@ form textarea {
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1rem;
 }
 
 form button {
@@ -159,11 +142,6 @@ form button:hover {
   background-color: #2980b9;
 }
 
-#contact a {
-  color: #2c3e50;
-}
-
-/* Scroll to Top Button */
 #scrollTopBtn {
   display: none;
   position: fixed;
@@ -184,7 +162,6 @@ form button:hover {
   background-color: #1c5980;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 15px 0;
@@ -193,11 +170,13 @@ footer {
   margin-top: 40px;
 }
 
-/* Media Queries for Mobile */
+/* ===============================
+   Responsive Adjustments
+   =============================== */
+
 @media (max-width: 768px) {
-  nav ul li {
-    display: block;
-    margin: 10px 0;
+  body {
+    padding: 10px;
   }
 
   .logo {
@@ -208,9 +187,18 @@ footer {
     font-size: 1.5rem;
   }
 
+  nav ul li {
+    display: block;
+    margin: 8px 0;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
   main {
-    margin: 20px 10px;
-    padding: 15px;
+    padding: 10px;
+    margin: 20px auto;
   }
 
   h2 {
@@ -218,12 +206,22 @@ footer {
     margin-bottom: 15px;
   }
 
+  .project {
+    padding: 10px;
+  }
+
   form input,
   form textarea {
     font-size: 1rem;
   }
 
-  nav {
-    padding: 15px 0;
+  form button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 10px 0;
   }
 }
