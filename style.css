@@ -1,98 +1,89 @@
-/* Base Reset and Global Styles */
+/* General Reset */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
   color: #333;
-  padding: 20px;
-}
-
-/* Container */
-main {
-  max-width: 960px;
-  margin: 0 auto;
 }
 
 /* Header */
 header {
-  background-color: #003366;
+  background-color: #004466;
   color: #fff;
-  padding: 20px 0;
+  padding: 30px 20px 20px;
   text-align: center;
+  margin-top: 20px; /* Adds top margin to the black header background */
 }
 
 header h1 {
-  font-size: 2rem;
   margin-bottom: 10px;
+  font-size: 2em;
 }
 
-/* Navigation */
 nav ul {
   list-style: none;
+  padding: 0;
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* Section Headings */
-section h2 {
-  font-size: 1.8rem;
-  margin-top: 40px;
+/* Main Content */
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #004466;
   margin-bottom: 10px;
-  color: #003366;
 }
 
-/* About Section */
-#about p {
-  margin-bottom: 20px;
-}
-
-/* Projects Section */
+/* Project Cards */
 .project {
   background-color: #fff;
   padding: 15px;
-  margin: 20px 0;
-  border-left: 5px solid #003366;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.project h3 {
-  margin-top: 10px;
-  color: #003366;
-}
-
-.project p {
-  margin: 10px 0;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
 .project-img {
   max-width: 100%;
   height: auto;
+  margin-bottom: 10px;
   border-radius: 5px;
+}
+
+.project h3 {
+  margin-bottom: 5px;
+}
+
+.project p {
   margin-bottom: 10px;
 }
 
 .project a {
-  display: inline-block;
-  margin-top: 5px;
-  color: #0066cc;
+  color: #004466;
+  font-weight: bold;
 }
 
 .project a:hover {
@@ -101,53 +92,21 @@ section h2 {
 
 /* Contact Section */
 #contact {
-  margin-top: 40px;
-  background-color: #eef2f7;
   padding: 20px;
-  border-left: 5px solid #003366;
+  background-color: #e6f7ff;
+  text-align: center;
 }
 
 /* Footer */
 footer {
+  background-color: #004466;
+  color: #fff;
   text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
   margin-top: 40px;
-  padding: 10px 0;
-  font-size: 0.9rem;
-  color: #666;
 }
 
-/* Links */
-a {
-  color: #0066cc;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.6rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  section h2 {
-    font-size: 1.5rem;
-  }
-
-  .project {
-    padding: 10px;
-  }
-
-  .project h3 {
-    font-size: 1.2rem;
-  }
 
   body {
     padding: 10px;
