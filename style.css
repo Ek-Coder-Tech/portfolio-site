@@ -1,36 +1,38 @@
-/* General Reset */
-body {
+/* Reset */
+body, h1, h2, p, ul {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+}
+
+body {
   background-color: #f4f4f4;
   color: #333;
+  line-height: 1.6;
+  padding: 0 10px;
 }
 
-/* Header Styles */
 header {
-  background-color: #ffffff;
-  padding: 1rem 0;
+  background-color: #0d47a1;
+  color: white;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 30px 20px 20px;
 }
 
-/* Headline (h1) */
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-  color: #007acc;
-}
-
-/* Navigation Bar */
 nav {
-  background-color: #007acc;
-  padding: 0.5rem 0;
+  margin-top: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 nav a {
-  color: #fff;
-  margin: 0 1rem;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
@@ -39,52 +41,75 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Main Content */
-main {
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  border-radius: 8px;
+section {
+  padding: 30px 20px;
+  background-color: white;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 1.8rem;
 }
 
 h2 {
-  color: #007acc;
-  margin-top: 2rem;
+  margin-bottom: 10px;
+  color: #0d47a1;
 }
 
-/* Projects Section */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #ddd;
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+
+/* Project layout */
 .project {
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 
 .project-img {
   width: 100%;
-  max-width: 600px;
   height: auto;
-  border-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-.project h3 {
-  margin: 0.5rem 0;
-  color: #333;
-}
-
-/* Contact Section */
+/* Contact section spacing */
 #contact {
-  padding: 2rem;
-  background-color: #eef6fb;
-  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
-footer {
-  background-color: #007acc;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .project {
+    text-align: center;
+  }
+
+  .project-img {
+    max-width: 100%;
+  }
+}
