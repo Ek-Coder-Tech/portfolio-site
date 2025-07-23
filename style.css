@@ -16,7 +16,8 @@ header {
   background-color: #0d47a1;
   color: white;
   text-align: center;
-  padding: 30px 20px 20px;
+  padding: 30px 20px;
+  margin-bottom: 10px;
 }
 
 nav {
@@ -24,17 +25,24 @@ nav {
 }
 
 nav ul {
-  list-style: none;
+  list-style-type: none;  /* ✅ Removes black dots */
+  padding: 0;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: wrap;
+}
+
+nav li {
+  display: inline-block;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1rem;
 }
 
 nav a:hover {
@@ -51,7 +59,8 @@ section {
 }
 
 h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 h2 {
@@ -68,7 +77,6 @@ footer {
   margin-top: 30px;
 }
 
-/* Project layout */
 .project {
   margin-bottom: 30px;
 }
@@ -80,7 +88,6 @@ footer {
   margin-bottom: 10px;
 }
 
-/* Contact section spacing */
 #contact {
   max-width: 800px;
   margin: 20px auto;
@@ -90,13 +97,8 @@ footer {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Mobile responsiveness */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   h1 {
     font-size: 1.5rem;
   }
@@ -105,11 +107,15 @@ footer {
     font-size: 1.3rem;
   }
 
+  nav ul {
+    justify-content: center;
+    flex-direction: row; /* ✅ Keep navs in a line */
+    gap: 20px;
+    overflow-x: auto;
+  }
+
   .project {
     text-align: center;
   }
-
-  .project-img {
-    max-width: 100%;
-  }
 }
+
