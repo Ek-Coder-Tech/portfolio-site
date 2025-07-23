@@ -1,4 +1,4 @@
-# Eric Mutisya | Developer Portfolio
+# Web Developer Portfolio
 
 Welcome to my personal developer portfolio website.
 
