@@ -1,8 +1,13 @@
-/* Base Reset and Global Styles */
+/* Reset and global styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -23,7 +28,7 @@ main {
 header {
   background-color: #003366;
   color: #fff;
-  padding: 20px 0;
+  padding: 20px 10px;
   text-align: center;
 }
 
@@ -37,21 +42,28 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  padding: 5px 10px;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* Section Headings */
+/* Sections */
+section {
+  padding: 10px;
+}
+
 section h2 {
   font-size: 1.8rem;
   margin-top: 40px;
@@ -59,12 +71,12 @@ section h2 {
   color: #003366;
 }
 
-/* About Section */
+/* About */
 #about p {
   margin-bottom: 20px;
 }
 
-/* Projects Section */
+/* Projects */
 .project {
   background-color: #fff;
   padding: 15px;
@@ -83,10 +95,11 @@ section h2 {
 }
 
 .project-img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 5px;
   margin-bottom: 10px;
+  display: block;
 }
 
 .project a {
@@ -99,7 +112,7 @@ section h2 {
   text-decoration: underline;
 }
 
-/* Contact Section */
+/* Contact */
 #contact {
   margin-top: 40px;
   background-color: #eef2f7;
@@ -127,6 +140,10 @@ a:hover {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
   header h1 {
     font-size: 1.6rem;
   }
@@ -148,14 +165,5 @@ a:hover {
   .project h3 {
     font-size: 1.2rem;
   }
-
-  body {
-    padding: 10px;
-  }
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
